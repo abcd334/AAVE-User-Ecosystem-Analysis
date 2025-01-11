@@ -45,38 +45,45 @@ Blockchain deployments initially drive significant transaction volume increases.
 
 ---
 
-### 各交易類型數量變化
+### Changes in Transaction Types
 ![image](../image/Transaction_Type_Count.jpg)
 
-展示了AAVE的每日交易類型數量，包括供應（Supply）、閃電貸（FlashLoan）、借款（Borrow）、償還（Repay）、清算（Liquidation）和提款（Withdraw）：
-1.	Supply（供應）：
-    -	高峰期：2021年和2022年初出現明顯高峰，可能與用戶對穩定收益的需求增長相關。
-    -	穩定期：2023年後供應交易量保持穩定，顯示長期穩定的資金流入。
-2.	FlashLoan（閃電貸）：
-    -	短期爆發：2021年和2024年初交易量激增，可能因套利機會或市場波動導致。
-    -	不穩定性：整體活動呈現爆發性且快速回落，說明其主要由專業交易者驅動。
-3.	Borrow（借款）與 Repay（償還）：
-    -	同步波動：借款和償還交易量呈現同步波動，顯示穩定的借貸行為。
-    -	2024年交易高峰：近期借貸需求略有回升，可能與市場利率或資產需求相關。
-4.	Liquidation（清算）：
-    -	稀疏但高影響：清算交易量極低，但在市場波動期（如2021年末）會出現集中高峰，顯示清算行為主要受市場條件影響。
-5.	Withdraw（提款）：
-    -	穩定但波動：提款交易數量穩定，但偶爾出現高峰，可能反映市場恐慌或資金需求增加。
+This section illustrates the daily transaction counts for various transaction types on AAVE, including Supply, FlashLoan, Borrow, Repay, Liquidation, and Withdraw:
 
-結論
+1. Supply:
 
-供應與借貸交易活動穩定，成為AAVE協議長期的核心基礎，而閃電貸和清算則受市場條件高度影響。近期（2024年）的交易高峰值得進一步研究可能原因，如市場波動或協議升級的影響。
+    -	Peak Period: Significant peaks were observed in 2021 and early 2022, potentially driven by increasing demand for stable returns.
+    -	Stable Period: Post-2023, the volume of Supply transactions remained steady, indicating consistent long-term capital inflow.
+2. FlashLoan:
+
+    -	Short-Term Surges: Transaction volumes spiked in 2021 and early 2024, likely due to arbitrage opportunities or market volatility.
+    -	Instability: Overall activity exhibited explosive growth followed by rapid declines, indicating that FlashLoan activity is predominantly driven by professional traders.
+3. Borrow and Repay:
+
+    -	Synchronized Fluctuations: Borrow and Repay transaction volumes moved in tandem, reflecting stable borrowing and repayment behavior.
+    -	2024 Peak: A recent surge in transaction volumes suggests a revival in borrowing demand, potentially linked to market interest rates or asset needs.
+4. Liquidation:
+
+    -	Sparse but Impactful: Liquidation volumes were low overall, but concentrated spikes occurred during periods of market volatility (e.g., late 2021), suggesting that Liquidation behavior is primarily influenced by market conditions.
+5. Withdraw:
+
+    -	Stable with Occasional Peaks: Withdraw volumes were generally stable but occasionally experienced surges, likely reflecting market panic or increased liquidity demands.
+
+Conclusion
+
+Supply and borrowing activities represent the stable core of the AAVE protocol, forming its long-term foundation. In contrast, FlashLoan and Liquidation activities are more sensitive to market conditions. The recent (2024) transaction peaks warrant further investigation into possible causes, such as market volatility or protocol upgrades.
+
 
 ---
 
-## 第二部分：用戶分群
+## Part 2: User Clustering
 
-### 用戶分群結果
+### User Clustering Results
 ![image](../image/Clustering.jpg)
 
-1. **用戶交易行為特徵分析**
+1. **User Transaction Behavior Analysis**
 
-    | 分群 | 用戶數 | 平均總交易次數 | 平均最大交易間隔(天) | 平均交易周期數量 | 平均每交易周期內最大交易次數 |
+    | Cluster | Number of Users | Average Total Transactions | Average Maximum Transaction Interval (Days) | Average Number of Transaction Cycles | Average Maximum Transactions per Cycle |
     |------|---------|----------------|---------------------|------------------|----------------------------|
     | 0 | 472,520 | 9.23 | 29.71 | 2.17 | 5.47 |
     | 1 | 2 | 57,000.50 | 66.88 | 16.00 | 12,888.50 |
@@ -85,9 +92,10 @@ Blockchain deployments initially drive significant transaction volume increases.
     | 4 | 74 | 7,239.91 | 157.99 | 22.72 | 2,342.91 |
     | 5 | 24,690 | 203.69 | 185.89 | 18.61 | 53.05 |
 
-2. **用戶交易類型分布分析**
+2. **User Transaction Type Distribution Analysis**
 
-    | 分群 | 用戶數 | 平均總交易次數 | 平均借款比例 | 平均存款比例 | 平均閃電貸比例 |
+    
+    | Cluster | Number of Users | Average Total Transactions | Average Borrow Ratio | Average Supply Ratio | Average Flash Loan Ratio |
     |------|---------|----------------|--------------|--------------|----------------|
     | 0 | 472,520 | 9.23 | 20.81% | 41.25% | 3.98% |
     | 1 | 2 | 57,000.50 | 34.96% | 20.29% | 0.00% |
@@ -96,16 +104,17 @@ Blockchain deployments initially drive significant transaction volume increases.
     | 4 | 74 | 7,239.91 | 23.90% | 29.08% | 16.47% |
     | 5 | 24,690 | 203.69 | 26.24% | 36.72% | 2.83% |
 
-3. **用戶分群詳細分析**
+3. **Detailed Analysis of User Segmentation**
 
-    | 分群類型 | 用戶數量 | 主要特徵 | 分析 |
-    |:---------|:----------|:----------|:----|
-    | 低活躍普通用戶<br>(Group 0) | 472,520 | • 平均交易次數：9.23次<br>• 平均最大交易間隔：29.71天<br>• 交易分布：<br>  - 存款 41.25%<br>  - 借款 20.81%<br>  - 閃電貸 3.98% | 普通用戶<br>交易頻率低但分布均勻<br>主要為協議提供基礎流動性<br>呈現月週期交易模式 |
-    | VIP專業用戶<br>(Group 1) | 2 | • 平均交易次數：57,000.50次<br>• 平均最大交易間隔：66.88天<br>• 交易分布：<br>  - 借款 34.96%<br>  - 存款 20.29% | 核心用戶群體<br>交易頻率極高<br>顯示穩定且強烈的借貸需求<br>可能為機構用戶 |
-    | 閃電貸專業用戶<br>(Group 2) | 2 | • 平均交易次數：21,933.50次<br>• 平均最大交易間隔：62.70天<br>• 交易分布：<br>  - 閃電貸 99.99% | 專業套利者<br>專注於高頻閃電貸交易 |
-    | 低活躍長期用戶<br>(Group 3) | 40,177 | • 平均交易次數：19.92次<br>• 平均最大交易間隔：471.01天<br>• 交易分布：<br>  - 存款 38.88%<br>  - 借款 19.33%<br>  - 閃電貸 1.53% | 長期低活躍投資者<br>為協議提供穩定的資金支持 |
-    | 高頻專業用戶<br>(Group 4) | 74 | • 平均交易次數：7,239.91次<br>• 平均最大交易間隔：157.99天<br>• 交易分布：<br>  - 存款 29.08%<br>  - 借款 23.90%<br>  - 閃電貸 16.47% | 長期策略投資者<br>活動時間跨度大<br>交易量顯示中高價值 |
-    | 中高活躍核心用戶<br>(Group 5) | 24,690 | • 平均交易次數：203.69次<br>• 平均最大交易間隔：185.89天<br>• 交易分布：<br>  - 存款 36.72%<br>  - 借款 26.24%<br>  - 閃電貸 2.83% | 穩定的核心用戶群體<br>使用場景多元化<br>對系統穩定性貢獻較大 |
+    | Cluster Type                     | Number of Users | Key Characteristics                                                                                               | Analysis                                                                                     |
+    |:---------------------------------|:----------------|:-------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------|
+    | Low Activity Regular Users<br>(Group 0) | 472,520         | • Average Transactions: 9.23<br>• Average Maximum Transaction Interval: 29.71 days<br>• Transaction Distribution:<br>  - Supply: 41.25%<br>  - Borrow: 20.81%<br>  - Flash Loan: 3.98% | Regular users<br>Low but evenly distributed transaction frequency<br>Primarily provide core liquidity<br>Show monthly cycle transaction patterns |
+    | VIP Professional Users<br>(Group 1)    | 2               | • Average Transactions: 57,000.50<br>• Average Maximum Transaction Interval: 66.88 days<br>• Transaction Distribution:<br>  - Borrow: 34.96%<br>  - Supply: 20.29% | Core user group<br>Extremely high transaction frequency<br>Indicate stable and strong borrowing demand<br>Likely institutional users |
+    | Flash Loan Professional Users<br>(Group 2) | 2           | • Average Transactions: 21,933.50<br>• Average Maximum Transaction Interval: 62.70 days<br>• Transaction Distribution:<br>  - Flash Loan: 99.99% | Professional arbitrageurs<br>Specialized in high-frequency flash loan transactions |
+    | Low Activity Long-term Users<br>(Group 3) | 40,177         | • Average Transactions: 19.92<br>• Average Maximum Transaction Interval: 471.01 days<br>• Transaction Distribution:<br>  - Supply: 38.88%<br>  - Borrow: 19.33%<br>  - Flash Loan: 1.53% | Long-term low activity investors<br>Provide stable capital support to the protocol |
+    | High-frequency Professional Users<br>(Group 4) | 74          | • Average Transactions: 7,239.91<br>• Average Maximum Transaction Interval: 157.99 days<br>• Transaction Distribution:<br>  - Supply: 29.08%<br>  - Borrow: 23.90%<br>  - Flash Loan: 16.47% | Long-term strategic investors<br>Wide activity span<br>Transaction volume indicates medium to high value |
+    | Moderately High Activity Core Users<br>(Group 5) | 24,690      | • Average Transactions: 203.69<br>• Average Maximum Transaction Interval: 185.89 days<br>• Transaction Distribution:<br>  - Supply: 36.72%<br>  - Borrow: 26.24%<br>  - Flash Loan: 2.83% | Stable core user group<br>Diverse usage scenarios<br>Contribute significantly to system stability |
+
 
 ---
 
