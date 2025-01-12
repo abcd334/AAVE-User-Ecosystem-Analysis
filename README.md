@@ -1,6 +1,6 @@
 # AAVE User Ecosystem Analysis
 
-![image](../image/AAVE.svg)
+![image](/image/AAVE.svg)
 
 
 - en [English](Readme/README_EN.md)
